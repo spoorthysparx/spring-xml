@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+                           
+    <bean id="res1" class="com.hexa.spring1.com.hexa.spring1.Result">
+          <property name="Marks" value="100"/>
+          <property name="Remarks" value="Pass"/>
+
+    </bean>
+    
+
+    <bean id="emp1" class="com.hexa.spring1.com.hexa.spring1.Emplouyee">
+        <property name="id" value="101" />
+        <property name="salary" value="10000" />
+        <property name="name" value="Ram" />
+        <property name="res" ref="res1"/>
+    </bean>
+    
+    <bean id="book1" class="com.hexa.spring1.com.hexa.spring1.Book">
+		<constructor-arg index="0" value="101"/>
+		<constructor-arg index="1" value="DSA"/>
+		<constructor-arg index="2" value="800"/>
+
+	</bean>
+
+</beans>
